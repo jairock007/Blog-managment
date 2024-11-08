@@ -1,0 +1,72 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SciAstra - Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">SciAstra</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#login" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Featured Courses Section -->
+        <section id="featured-courses">
+            <h2>Featured Courses</h2>
+            <div class="courses-grid" id="courses-container">
+                <!-- Courses will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog-section">
+            <h2>Latest Blog Posts</h2>
+            <div class="blog-grid" id="blog-container">
+                <!-- Blog posts will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Complete Your Purchase</h2>
+            <form id="payment-form">
+                <div class="payment-options">
+                    <label>
+                        <input type="radio" name="payment-method" value="card"> Credit/Debit Card
+                    </label>
+                    <label>
+                        <input type="radio" name="payment-method" value="upi"> UPI
+                    </label>
+                </div>
+                <div id="card-payment-fields">
+                    <input type="text" placeholder="Card Number" required>
+                    <div class="card-details">
+                        <input type="text" placeholder="MM/YY" required>
+                        <input type="text" placeholder="CVV" required>
+                    </div>
+                </div>
+                <div id="upi-payment-fields" style="display: none;">
+                    <input type="text" placeholder="UPI ID" required>
+                </div>
+                <button type="submit">Pay Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
